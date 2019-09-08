@@ -34,13 +34,24 @@ class ViewController: UIViewController {
                         "You've got the design skills of Jony Ive!",
                         "I can't wait to download your app"]
         
+        //var newIndex = -1
+        var newIndex: Int // declares but not initializes
+        repeat{
+            newIndex = Int.random(in: 0...messages.count - 1)
+        } while index == newIndex
+        
+        index = newIndex
         messageLabel.text = messages[index]
         
-        if index == messages.count - 1 {
-            index = 0
-        } else {
-            index = index + 1
-        }
+//        messageLabel.text = messages.randomElement()
+        
+//        messageLabel.text = messages[index]
+//
+//        if index == messages.count - 1 {
+//            index = 0
+//        } else {
+//            index = index + 1
+//        }
         
 //        let message1 = "You Are Awesome!"
 //        let message2 = "You Are Great!"
